@@ -9,10 +9,9 @@ import rehypeRaw from 'rehype-raw';
 import rehypeAttrs from 'rehype-attr';
 import rehypeIgnore from 'rehype-ignore';
 import rehypePrism from 'rehype-prism-plus';
-import rehypeRewrite, { getCodeString, RehypeRewriteOptions } from 'rehype-rewrite';
+import { getCodeString, RehypeRewriteOptions } from 'rehype-rewrite';
 import { octiconLink } from './nodes/octiconLink';
 import { copyElement } from './nodes/copy';
-import './styles/markdown.less';
 
 import { reservedMeta } from './plugins/reservedMeta';
 
@@ -75,7 +74,7 @@ export default React.forwardRef<MarkdownPreviewRef, MarkdownPreviewProps>((props
     slug,
     headings,
     rehypeIgnore,
-    [rehypeRewrite, { rewrite: rehypeRewriteHandle }],
+    // [rehypeRewrite, { rewrite: rehypeRewriteHandle }],
     [rehypeAttrs, { properties: 'attr' }],
     ...(other.rehypePlugins || []),
   ];
