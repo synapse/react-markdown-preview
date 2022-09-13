@@ -16,6 +16,7 @@
     "bundle:min": "ncc build src/index.tsx --target web --filename markdown --minify",
     "watch": "tsbb watch & npm run css:watch",
     "build": "tsbb build && npm run css:build && npm run css:build:dist",
+    "build2": "tsbb build",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "pretty-quick": "pretty-quick --staged",
     "test": "tsbb test --env=jsdom",
